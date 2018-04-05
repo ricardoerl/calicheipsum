@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import loremIpsum from 'lorem-ipsum';
+import airtable from 'airtable';
 import { Flex, Box, Select, Label, Textarea } from 'rebass';
+import defaultDictionary from '../utils/dictionary';
+
+const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
+const AIRTABLE_BASE_ID = process.env.REACT_APP_AIRTABLE_BASE_ID;
+
+const base = new airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
 const defaultOptions = {
   count: 1,
@@ -10,25 +17,48 @@ const defaultOptions = {
 class Home extends Component {
   state = {
     text: '',
+    words: [],
+    dictionary: [],
   };
 
   componentDidMount() {
-    this.setState({
-      text: this.getLoremText(),
-    });
+    base('Caliches')
+      .select({
+        view: 'Grid view',
+      })
+      .firstPage((err, records) => {
+        const wordsFromDictionary = this.getWordsFromDictionary(records);
+        this.setState({
+          text: this.getLoremText({
+            words: [...defaultDictionary, ...wordsFromDictionary],
+          }),
+          words: [...defaultDictionary, ...wordsFromDictionary],
+          dictionary: this.normalizeDictionary(records),
+        });
+      });
   }
 
-  getLoremText = (options = {}) => {
+  normalizeDictionary = collection =>
+    collection.map(item => ({
+      id: item.id,
+      fields: item.fields,
+    }));
+
+  getLoremText = options => {
     return loremIpsum({
       ...defaultOptions,
       ...options,
     });
   };
 
+  getWordsFromDictionary = collection =>
+    collection.map(item => item.fields.Word);
+
   handleInputChange = n => {
     const { target: { value } } = n;
+    const { words } = this.state;
     this.setState({
-      text: this.getLoremText({ count: value }),
+      text: this.getLoremText({ count: value, words }),
     });
   };
 
