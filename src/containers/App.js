@@ -5,7 +5,6 @@ import { Heading, Flex, Box } from 'rebass';
 import Menu from '../components/Menu';
 import Home from '../components/Home';
 import Submit from '../components/Submit';
-import List from '../components/List';
 
 class App extends Component {
   render() {
@@ -17,8 +16,7 @@ class App extends Component {
         </Box>
         <Box w={[1, 1 / 2, 1 / 2]} my={4} mx="auto">
           <Route exact path="/" component={Home} />
-          <Route exact path="/submit" component={Submit} />
-          <Route exact path="/list" component={List} />
+          <Route exact path="/sugerencias" component={Submit} />
         </Box>
       </Flex>
     );

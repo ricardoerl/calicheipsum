@@ -1,9 +1,15 @@
 import React from 'react';
+import { Embed } from 'rebass';
 
 const Submit = () => (
-  <div>
-    <h1>Submit</h1>
-  </div>
+  <Embed>
+    <iframe
+      className="airtable-embed"
+      src="https://airtable.com/embed/shrzNXPnVFJCWCD2Y?backgroundColor=yellow"
+      frameborder="0"
+      width="100%"
+    />
+  </Embed>
 );
 
 export default Submit;

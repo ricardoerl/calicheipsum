@@ -5,13 +5,10 @@ import { Flex, Box } from 'rebass';
 const Menu = () => (
   <Flex>
     <Box mr={2}>
-      <NavLink to="/">Home</NavLink>
+      <NavLink to="/">Inicio</NavLink>
     </Box>
     <Box mr={2}>
-      <NavLink to="/submit">Submit</NavLink>
-    </Box>
-    <Box mr={2}>
-      <NavLink to="/list">List</NavLink>
+      <NavLink to="/sugerencias">Sugerí un caliche</NavLink>
     </Box>
   </Flex>
 );
