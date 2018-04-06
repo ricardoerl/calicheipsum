@@ -1,0 +1,15 @@
+Release 1:
+  ✔ Obtener solo palabras aprobadas de Airtable @done (2018-4-5 23:59:12)
+  ☐ Refactorizar componente Home
+  ☐ Agregar boton para copiar texto
+  ☐ Implementar alto de textarea dinamico
+  ☐ Implementar diseño final
+  ✔ Quitar spellcheck de textarea @done (2018-4-5 23:38:49)
+  ✔ Quitar resize de textarea @done (2018-4-5 23:38:48)
+  ☐ Agregar alertas y validaciones
+  ☐ Agregar manejo de errorres
+  ☐ Agregar información sobre el proyecto
+  ☐ Configurar dominio final
+  ☐ Implementar lista de palabras/autores
+  ☐ Agregar pruebas unitarias
+  ☐ Publicar indicaciones para contribuir
