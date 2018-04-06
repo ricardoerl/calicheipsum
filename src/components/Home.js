@@ -78,7 +78,7 @@ class Home extends Component {
           <Textarea
             rows={15}
             value={this.state.text}
-            spellcheck={false}
+            spellCheck={false}
             style={{ resize: 'none' }}
           />
         </Box>
