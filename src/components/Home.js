@@ -75,7 +75,12 @@ class Home extends Component {
           </Select>
         </Box>
         <Box width={2 / 3} px={2}>
-          <Textarea rows={15} value={this.state.text} />
+          <Textarea
+            rows={15}
+            value={this.state.text}
+            spellcheck={false}
+            style={{ resize: 'none' }}
+          />
         </Box>
       </Flex>
     );
