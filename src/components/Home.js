@@ -24,7 +24,7 @@ class Home extends Component {
   componentDidMount() {
     base('Caliches')
       .select({
-        view: 'Grid view',
+        filterByFormula: 'Status = TRUE()',
       })
       .firstPage((err, records) => {
         const wordsFromDictionary = this.getWordsFromDictionary(records);
