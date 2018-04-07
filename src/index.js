@@ -14,8 +14,10 @@ injectGlobal`
   body {
     margin: 0;
     padding: 0;
+    font-size: 18px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   }
+  .text-center { text-align: center; }
 `;
 
 ReactDOM.render(

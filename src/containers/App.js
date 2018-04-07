@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { Heading, Flex, Box } from 'rebass';
+import { BackgroundImage, Box } from 'rebass';
 
-import Menu from '../components/Menu';
+import Navigation from '../components/Navigation';
+
 import Home from '../components/Home';
-import Submit from '../components/Submit';
-
 class App extends Component {
   render() {
     return (
-      <Flex flexDirection="column">
-        <Box w={[1, 1 / 2, 1 / 2]} my={4} mx="auto">
-          <Heading my={2}>CalicheIpsum</Heading>
-          <Menu />
+      <BackgroundImage
+        py={[5, 6, 7]}
+        px={[2, 4]}
+        ratio={1 / 2}
+        src="https://c1.staticflickr.com/4/3538/3396620788_7f1f48849d_b.jpg"
+      >
+        <Box
+          p={4}
+          mx="auto"
+          bg="white"
+          style={{ maxWidth: '64em', borderRadius: '4px' }}
+        >
+          <Box mb={4}>
+            <Navigation />
+          </Box>
+          <Box>
+            <Route exact path="/" component={Home} />
+          </Box>
         </Box>
-        <Box w={[1, 1 / 2, 1 / 2]} my={4} mx="auto">
-          <Route exact path="/" component={Home} />
-          <Route exact path="/sugerencias" component={Submit} />
-        </Box>
-      </Flex>
+      </BackgroundImage>
     );
   }
 }

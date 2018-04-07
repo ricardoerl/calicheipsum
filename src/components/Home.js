@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import { Box } from 'rebass';
+import { Row, Col, Select, Input } from 'antd';
 import loremIpsum from 'lorem-ipsum';
 import airtable from 'airtable';
-import { Flex, Box, Select, Label, Textarea } from 'rebass';
 import defaultDictionary from '../utils/dictionary';
+
+const Option = Select.Option;
+const { TextArea } = Input;
 
 const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.REACT_APP_AIRTABLE_BASE_ID;
@@ -10,7 +14,7 @@ const AIRTABLE_BASE_ID = process.env.REACT_APP_AIRTABLE_BASE_ID;
 const base = new airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
 const defaultOptions = {
-  count: 1,
+  count: 2,
   units: 'paragraphs',
 };
 
@@ -54,8 +58,7 @@ class Home extends Component {
   getWordsFromDictionary = collection =>
     collection.map(item => item.fields.Word);
 
-  handleInputChange = n => {
-    const { target: { value } } = n;
+  handleInputChange = value => {
     const { words } = this.state;
     this.setState({
       text: this.getLoremText({ count: value, words }),
@@ -64,25 +67,32 @@ class Home extends Component {
 
   render() {
     return (
-      <Flex mx={-2}>
-        <Box width={1 / 3} px={2}>
-          <Label>¿Cuánto párrafos querés?</Label>
-          <Select onChange={this.handleInputChange}>
-            <option value="1">1 párrafo</option>
-            <option value="2">2 párrafos</option>
-            <option value="3">3 párrafos</option>
-            <option value="4">4 párrafos</option>
-          </Select>
-        </Box>
-        <Box width={2 / 3} px={2}>
-          <Textarea
-            rows={15}
+      <Row>
+        <Col xs={24} sm={24} md={8}>
+          <Box mb={[4]}>
+            <h3>¿Cuántos va querer?</h3>
+            <Select
+              size="large"
+              style={{ width: 150 }}
+              defaultValue="2"
+              onChange={this.handleInputChange}
+            >
+              <Option value="1">1 párrafo</Option>
+              <Option value="2">2 párrafos</Option>
+              <Option value="3">3 párrafos</Option>
+              <Option value="4">4 párrafos</Option>
+            </Select>
+          </Box>
+        </Col>
+        <Col xs={24} sm={24} md={16}>
+          <TextArea
             value={this.state.text}
             spellCheck={false}
             style={{ resize: 'none' }}
+            autosize
           />
-        </Box>
-      </Flex>
+        </Col>
+      </Row>
     );
   }
 }
