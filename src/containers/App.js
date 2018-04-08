@@ -19,7 +19,11 @@ class App extends Component {
           p={4}
           mx="auto"
           bg="white"
-          style={{ maxWidth: '64em', borderRadius: '4px' }}
+          style={{
+            maxWidth: '64em',
+            borderRadius: '4px',
+            boxShadow: '0px 0px 178px -30px rgba(0,0,0,0.75)',
+          }}
         >
           <Box mb={4}>
             <Navigation />
