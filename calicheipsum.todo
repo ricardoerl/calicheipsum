@@ -6,20 +6,20 @@ Release 1:
   ✔ Implementar diseño final @done (2018-4-7 18:49:35)
   ✔ Quitar spellcheck de textarea @done (2018-4-5 23:38:49)
   ✔ Quitar resize de textarea @done (2018-4-5 23:38:48)
-  ☐ Implementar texto en HTML
-  ☐ Agregar botones sociales
-  ☐ Agregar alertas y validaciones
-  ☐ Agregar manejo de errorres
+  ✔ Implementar texto en HTML @done (2018-4-7 23:07:20)
   ✔ Agregar información sobre el proyecto @done (2018-4-7 19:40:00)
-  ☐ Configurar dominio final
+  ✔ Configurar dominio final @done (2018-4-7 23:43:35)
   ✔ Agregar script de Google Analytics @done (2018-4-7 20:37:29)
-  ☐ Agregar y verificar tags para redes sociales
+  ✔ Agregar y verificar tags para redes sociales @done (2018-4-7 23:36:21)
   
 
 Release 1:
+  ☐ Agregar botones sociales
   ☐ Refactorizar componente Home
   ☐ Publicar indicaciones para contribuir
   ☐ Implementar lista de palabras/autores
   ☐ Agregar pruebas unitarias
   ☐ Arregla la alerta de "unsafe header"
   ☐ Implementar correctamente Google Analytics
+  ☐ Agregar alertas y validaciones
+  ☐ Agregar manejo de errorres
