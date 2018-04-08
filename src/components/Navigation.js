@@ -20,7 +20,11 @@ const Navigation = () => (
       </Box>
     </Col>
     <Col xs={24} sm={{ span: 5, offset: 7 }}>
-      <Link target="_blank" to="https://airtable.com/shrzNXPnVFJCWCD2Y">
+      <Link
+        target="_blank"
+        rel="noopener noreferrer"
+        to="https://airtable.com/shrzNXPnVFJCWCD2Y"
+      >
         <Button icon="plus" className="cta" type="primary" size="large">
           Agregar caliche
         </Button>

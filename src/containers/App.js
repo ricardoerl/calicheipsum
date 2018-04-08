@@ -18,6 +18,7 @@ class App extends Component {
         <Box
           p={4}
           mx="auto"
+          mb={5}
           bg="white"
           style={{
             maxWidth: '64em',
@@ -28,9 +29,19 @@ class App extends Component {
           <Box mb={4}>
             <Navigation />
           </Box>
-          <Box>
+          <Box mb={4}>
             <Route exact path="/" component={Home} />
             <Route exact path="/acerca-de" component={About} />
+          </Box>
+          <Box style={{ textAlign: 'center' }}>
+            Foto de{' '}
+            <a
+              href="https://flic.kr/p/6b9z2o"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Shane MacClure
+            </a>
           </Box>
         </Box>
       </BackgroundImage>
