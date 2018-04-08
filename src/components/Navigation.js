@@ -1,18 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heading } from 'rebass';
+import { Box, Heading } from 'rebass';
 import { Row, Col, Button } from 'antd';
 
 const Navigation = () => (
-  <Row type="flex" justify="space-between" align="middle">
-    <Col>
+  <Row type="flex" align="middle">
+    <Col xs={24} sm={6}>
       <Heading>
         <Link to="/" style={{ textDecoration: 'none' }}>
           CalicheIpsum
         </Link>
       </Heading>
     </Col>
-    <Col>
+    <Col xs={24} sm={6}>
+      <Box mx={3}>
+        <Link to="acerca-de" style={{ color: '#ccc', textDecoration: 'none' }}>
+          ¿Qué es esto?
+        </Link>
+      </Box>
+    </Col>
+    <Col xs={24} sm={{ span: 5, offset: 7 }}>
       <Link target="_blank" to="https://airtable.com/shrzNXPnVFJCWCD2Y">
         <Button icon="plus" className="cta" type="primary" size="large">
           Agregar caliche
