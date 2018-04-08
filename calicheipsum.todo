@@ -1,6 +1,6 @@
 Release 1:
   ✔ Obtener solo palabras aprobadas de Airtable @done (2018-4-5 23:59:12)
-  ☐ Refactorizar componente Home
+  
   ✔ Agregar boton para copiar texto @done (2018-4-7 18:49:21)
   ✔ Implementar alto de textarea dinamico @done (2018-4-7 18:06:15)
   ✔ Implementar diseño final @done (2018-4-7 18:49:35)
@@ -12,9 +12,13 @@ Release 1:
   ✔ Agregar información sobre el proyecto @done (2018-4-7 19:40:00)
   ☐ Configurar dominio final
   ✔ Agregar script de Google Analytics @done (2018-4-7 20:37:29)
-  ☐ Implementar correctamente Google Analytics
   ☐ Agregar y verificar tags para redes sociales
-  ☐ Arregla la alerta de "unsafe header"
+  
+
+Release 1:
+  ☐ Refactorizar componente Home
+  ☐ Publicar indicaciones para contribuir
   ☐ Implementar lista de palabras/autores
   ☐ Agregar pruebas unitarias
-  ☐ Publicar indicaciones para contribuir
+  ☐ Arregla la alerta de "unsafe header"
+  ☐ Implementar correctamente Google Analytics
