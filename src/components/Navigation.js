@@ -6,7 +6,7 @@ import { Row, Col, Button } from 'antd';
 const Navigation = () => (
   <Row type="flex" justify="space-between" align="middle">
     <Col>
-      <Heading m>
+      <Heading>
         <Link to="/" style={{ textDecoration: 'none' }}>
           CalicheIpsum
         </Link>
