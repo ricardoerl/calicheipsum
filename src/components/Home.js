@@ -42,7 +42,7 @@ class Home extends Component {
           text: this.getLoremText({
             words: [...defaultDictionary, ...wordsFromDictionary],
           }),
-          words: [...defaultDictionary, ...FromDictionary],
+          words: [...defaultDictionary, ...wordsFromDictionary],
           dictionary: this.normalizeDictionary(records),
         });
       });
