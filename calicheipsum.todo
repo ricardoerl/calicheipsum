@@ -11,6 +11,9 @@ Release 1:
   ☐ Agregar manejo de errorres
   ✔ Agregar información sobre el proyecto @done (2018-4-7 19:40:00)
   ☐ Configurar dominio final
+  ☐ Agregar script de Google Analytics
+  ☐ Agregar y verificar tags para redes sociales
+  ☐ Arregla la alerta de "unsafe header"
   ☐ Implementar lista de palabras/autores
   ☐ Agregar pruebas unitarias
   ☐ Publicar indicaciones para contribuir
