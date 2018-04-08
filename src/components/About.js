@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Box } from 'rebass';
-import { Row, Col, Select, Input, Button, message } from 'antd';
 
 class About extends Component {
   render() {
@@ -37,7 +36,11 @@ class About extends Component {
           >
             Ricardo Ramírez
           </a>. El código fuente se encuentra disponible{' '}
-          <a href="https://github.com/ricardoerl/calicheipsum" target="_blank">
+          <a
+            href="https://github.com/ricardoerl/calicheipsum"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             aquí
           </a>.
         </p>
