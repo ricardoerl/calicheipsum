@@ -6,6 +6,7 @@ Release 1:
   ✔ Implementar diseño final @done (2018-4-7 18:49:35)
   ✔ Quitar spellcheck de textarea @done (2018-4-5 23:38:49)
   ✔ Quitar resize de textarea @done (2018-4-5 23:38:48)
+  ☐ Implementar texto en HTML
   ☐ Agregar alertas y validaciones
   ☐ Agregar manejo de errorres
   ☐ Agregar información sobre el proyecto
