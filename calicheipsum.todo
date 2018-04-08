@@ -9,7 +9,7 @@ Release 1:
   ☐ Implementar texto en HTML
   ☐ Agregar alertas y validaciones
   ☐ Agregar manejo de errorres
-  ☐ Agregar información sobre el proyecto
+  ✔ Agregar información sobre el proyecto @done (2018-4-7 19:40:00)
   ☐ Configurar dominio final
   ☐ Implementar lista de palabras/autores
   ☐ Agregar pruebas unitarias
