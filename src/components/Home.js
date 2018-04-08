@@ -18,6 +18,7 @@ const defaultOptions = {
   count: 2,
   units: 'paragraphs',
   format: 'html',
+  suffix: '\n\n',
 };
 
 const stripString = string => string.replace(/(<([^>]+)>)/gi, '');
